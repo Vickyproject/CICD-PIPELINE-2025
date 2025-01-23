@@ -11,7 +11,9 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - echo git checkout "feature"
+      - echo "Current branch being built:"
+      - git branch
+      - git checkout "feature"
       - echo "Installing dependencies..."
       - pip install -r requirements.txt
       - echo "Running tests..."
