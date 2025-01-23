@@ -11,10 +11,6 @@ phases:
       python: 3.11
   pre_build:
     commands:
-      - echo "Current branch being built:"
-      - git branch  # This should work if CodeBuild properly checks out the repo
-      - git fetch origin  # Ensure all branches are fetched
-      - git checkout feature  # Checkout to your desired branch
       - echo "Installing dependencies..."
       - pip install -r requirements.txt
       - echo "Running tests..."
